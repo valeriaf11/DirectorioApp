@@ -1,4 +1,4 @@
-//En js tenemos las funciones de tipo felcha
+//En js tenemos las funciones de tipo flecha
 //Utilizaremos fetch que es un metodo para consumir una API
 
 //Funcion flecha
@@ -13,3 +13,18 @@ const consumirApi = () => {
 };
 
 consumirApi()
+
+// Function to consume the "albums" API
+const fetchAlbums = () => {
+  // Get data from the API
+  fetch("https://jsonplaceholder.typicode.com/albums")
+    // Convert the response to JSON format
+    .then((response) => response.json())
+    // Display the data in the console
+    .then((data) => console.log("ALBUMS:", data))
+    // Handle possible errors
+    .catch((error) => console.log("ERROR:", error));
+};
+
+// Call the function
+fetchPosts();
