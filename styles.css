@@ -1,0 +1,53 @@
+/* Establece el color de fondo general del cuerpo de la página */
+body {
+  background-color: #d2bee6;
+}
+
+/* Estilo para el contenedor de tarjetas (usando flexbox) */
+.row {
+  display: flex;              /* Activa el modelo Flexbox */
+  flex-wrap: wrap;            /* Permite que las tarjetas salten a la siguiente línea si no caben */
+  flex-direction: row-reverse; /* Invierte el orden de las tarjetas (última primero) */
+  gap: 1rem;                  /* Espacio entre tarjetas */
+}
+
+/* Estilo base para cada tarjeta */
+.card {
+  border-radius: 15px;        /* Bordes redondeados */
+  overflow: hidden;           /* Oculta el contenido que se desborda del borde redondeado */
+  transition: transform 0.2s ease, box-shadow 0.3s ease; /* Suaviza los efectos al pasar el mouse */
+  flex: 1 1 calc(33.333% - 1rem); /* Las tarjetas ocuparán un tercio del ancho del contenedor menos el espacio del gap */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.card:hover {
+  transform: translateY(-5px);  /* Mueve la tarjeta ligeramente hacia arriba */
+  box-shadow: 0 0 20px rgb(4, 54, 234); /* Agrega sombra para dar sensación de elevación */
+}
+
+/* Estilo de la imagen superior de la tarjeta */
+.card-img-top {
+  height: 180px;           /* Altura fija para todas las imágenes */
+  object-fit: cover;       /* La imagen se recorta para llenar el área sin distorsión */
+}
+
+/* Estilo del título dentro de la tarjeta */
+.card-title {
+  color: #030303;  
+}
+
+/* Estilo de los enlaces dentro de la tarjeta */
+.card-link {
+  color: #0d6efd;          
+  text-decoration: none;  /* Quita el subrayado por defecto */
+}
+
+/* Al pasar el mouse sobre el enlace, se subraya */
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Tipografía para encabezados principales y títulos */
+h1, h5 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+}
